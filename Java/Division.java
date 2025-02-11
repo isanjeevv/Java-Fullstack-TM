@@ -7,7 +7,6 @@ public class DivisionWithoutOperator {
         int quotient = 0;
         int remainder = dividend;
 
-        // Division logic using subtraction
         while (remainder >= divisor) {
             remainder -= divisor;
             quotient++;
