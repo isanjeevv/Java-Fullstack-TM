@@ -1,0 +1,33 @@
+<!-- Create an alert to display the address of the user, and get the input from the user for the same -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Address</h2>
+
+    <button onclick="enterAddress()">Enter your address</button>
+
+    <p id = "demo"></p>
+
+    <script>
+        function enterAddress(){
+            let displayText
+            let address = prompt("Please enter your address", "Address")
+            if (address == null || address == ""){
+                displayText = "User has cancelled"
+            }
+            else{
+                displayText = "Your address is " + address
+            }
+            document.getElementById("demo").innerHTML = displayText;
+        }
+    </script>
+
+</body>
+</html>
