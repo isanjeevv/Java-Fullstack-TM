@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Go to Film today?</h2>
+
+    <button onclick="film()">Select options</button>
+    
+    <p id="demo"></p>
+
+    <script>
+        function film(){
+            let displayText
+            let answer = confirm("Will you go to film today?")
+            if (answer == null || answer == ""){
+                displayText = "I will not go to film"
+            }
+            else{
+                displayText = "I will go to the films"
+            }
+            document.getElementById("demo").innerHTML = displayText;
+        }
+    </script>
+
+
+</body>
+</html>
