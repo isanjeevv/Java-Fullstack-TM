@@ -29,7 +29,7 @@ public class Task1 {
     }
 
     public static void main(String[] args) {
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/EmployeeDB", "root", "Akshay@13");
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/EmployeeDB", "root", "sanjeev");
              Scanner scanner = new Scanner(System.in)) {
             insertData(conn, scanner);
         } catch (SQLException e) {
