@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructors - Online Education Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .instructors-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+      }
+      .instructor-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 250px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .instructor-card:hover {
+        transform: scale(1.05);
+      }
+      .instructor-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="instructors.html">Instructors</a></li>
+          <li><a href="enrollment.html">Enroll</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="instructors">
+        <h1>Meet Our Expert Instructors</h1>
+        <div class="instructors-container">
+          <div class="instructor-card">
+            <img src="images/face1.jpeg" alt="John Doe">
+            <h2>John Doe</h2>
+            <p>Professor</p>
+            <p>John has 10 years of experience in Architecture.</p>
+          </div>
+          <div class="instructor-card">
+            <img src="images/face2.jpeg" alt="Jane Smith">
+            <h2>Jane Smith</h2>
+            <p>Professor</p>
+            <p>Jane has a PhD in Architecture and has worked with top Architecture companies.</p>
+          </div>
+          <div class="instructor-card">
+            <img src="images/face3.jpeg" alt="Alice Johnson">
+            <h2>Alice Johnson</h2>
+            <p>Professor</p>
+            <p>Alice is a Architecture expert with extensive industry experience.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Online Education Platform. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

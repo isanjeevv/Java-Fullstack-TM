@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Online Education Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .search-container {
+        margin: 20px 0;
+      }
+      .search-bar {
+        padding: 10px;
+        width: 50%;
+        font-size: 16px;
+      }
+      .courses-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .course-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+        width: 250px;
+      }
+      .course-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .course-card h3 {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .enroll-btn {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 5px;
+      }
+      .enroll-btn:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="instructors.html">Instructors</a></li>
+          <li><a href="enrollment.html">Enroll</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Explore Our Courses</h1>
+      <div class="search-container">
+        <input type="text" id="search-bar" class="search-bar" placeholder="Search for a course..." onkeyup="filterCourses()">
+      </div>
+
+      <div class="courses-container" id="course-list">
+        <div class="course-card" data-name="Green Building Rating Systems">
+          <img src="images/Archetecture.jpg" alt="Green Building Rating Systems">
+          <h3>Green Building Rating Systems</h3>
+          <p>Instructor: John Doe</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <div class="course-card" data-name="Introduction to Green Buildings">
+          <img src="images/Arch.jpg" alt="Introduction to Green Buildings">
+          <h3>Introduction to Green Buildings</h3>
+          <p>Instructor: Jane Smith</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <div class="course-card" data-name="Sustainable Architecture & Building Design">
+          <img src="images/green arch.jpeg" alt="Sustainable Architecture & Building Design">
+          <h3>Sustainable Architecture & Building Design</h3>
+          <p>Instructor: Alice Johnson</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Online Education Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function filterCourses() {
+        let searchQuery = document.getElementById("search-bar").value.toLowerCase();
+        let courses = document.querySelectorAll(".course-card");
+        courses.forEach(course => {
+          let courseName = course.getAttribute("data-name").toLowerCase();
+          if (courseName.includes(searchQuery)) {
+            course.style.display = "block";
+          } else {
+            course.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

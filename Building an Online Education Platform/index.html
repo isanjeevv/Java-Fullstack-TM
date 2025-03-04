@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Education Platform</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .carousel-container {
+                position: relative;
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+            .carousel {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            .carousel-item {
+                min-width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .carousel-item img {
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 24px;
+            }
+            .prev { left: 10px; }
+            .next { right: 10px; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="instructors.html">Instructors</a></li>
+                    <li><a href="enrollment.html">Enroll</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home">
+                <h1>Welcome to Our Online Education Platform</h1>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="images/Archetecture.jpg" alt="Green Building Rating Systems">
+                            <h2>Green Building Rating Systems</h2>
+                            <p>Instructor: John Doe</p>
+                            <p>A brief introduction to Green Building Rating Systems.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Arch.jpg" alt="Introduction to Green Buildings">
+                            <h2>Introduction to Green Buildings</h2>
+                            <p>Instructor: Jane Smith</p>
+                            <p>A beginner-friendly introduction to sustainable architecture.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/green arch.jpeg" alt="Sustainable Architecture & Building Design">
+                            <h2>Sustainable Architecture & Building Design</h2>
+                            <p>Instructor: Alice Johnson</p>
+                            <p>Learn about eco-friendly building design and sustainability.</p>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Online Education Platform. All rights reserved.</p>
+        </footer>
+
+        <script>
+            let currentIndex = 0;
+            function moveSlide(direction) {
+                const carousel = document.querySelector(".carousel");
+                const totalSlides = document.querySelectorAll(".carousel-item").length;
+                currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                const offset = -currentIndex * 100;
+                carousel.style.transform = `translateX(${offset}%)`;
+            }
+        </script>
+    </body>
+</html>
